@@ -14,7 +14,7 @@ public class TaskDao extends Dao {
 
     public void method1(int qty){
         try{// 1. SQL 작성
-            String sql = "update products set stock_quantity = stock_quantity + ? ";
+            String sql = "update products set stock_quantity + ? where ";
             // 2. SQL 기재
             PreparedStatement ps = conn.prepareStatement(sql);
             // 3. SQL 매개변수 대입
