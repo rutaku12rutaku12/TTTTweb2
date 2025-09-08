@@ -1,11 +1,8 @@
 package example.day04._1빌더패턴;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.lang.reflect.Member;
 @Builder // **빌더 패턴**
 @ToString
 // (2) 설계 클래스
