@@ -41,3 +41,13 @@
         4) 마크업(요소)의 속성값 가져오기
             String attr = element.attr("속성명");
                 예) <img src="localhost:8080" /> --> localhost:8080
+
+[ Selenium + 크롬 ]
+    1) Selenium
+        1. Selenium 검색
+        2. selenium 자바 4.35 (최신버전)
+        3. implementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
+    2) WebDriverManager
+        1. WebDriverManager 검색
+        2. WebDriverManager > 6.31 최신
+        3.implementation 'io.github.bonigarcia:webdrivermanager:6.3.1'
