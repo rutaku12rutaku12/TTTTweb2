@@ -26,12 +26,20 @@ const create = createRoot( root );
 // create.render( <App></App> );
 
 // day01
-// import Component1 from './example/day01/Component1.jsx';
+import Component1 from './example/day01/Component1.jsx';
 // // create.render( <Component1/> </Component1> )
 // create.render( <Component1 /> )
 
 import Component2 from './example/day01/Component2.jsx';
-create.render( <Component2 />)
+// create.render( <Component2 />)
+
+import Component3 from './example/day01/Component3.jsx';
+// create.render( < Component3 /> )
+
+import Task1 from './example/day01/Task1.jsx';
+// create.render( <Task1 /> )
+import Task2 from './example/day01/Task2.jsx';
+create.render( <Task2 /> )
 
 // * 2 ~ 4-2 요약가능 , 즉]  createRoot( document.querySelector('#root') ).render( <최초출력할함수명 /> );
 // createRoot( document.querySelector('#root') ).render( <App /> );
