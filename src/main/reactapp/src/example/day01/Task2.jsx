@@ -29,7 +29,7 @@ function PP( props ){
     return(<>
         <ul>
             <li id="title">{title}</li>
-            <li id="price">{price}</li>
+            <li id="price">{price}원</li>
             <li id="stock" className={inStock ? 'instock' : 'outstock'}>{inStock == true ? '재고있음' : '재고없음' }</li>
         </ul>
     </>)
