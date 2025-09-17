@@ -49,7 +49,9 @@ import Component6 from './example/day02/Component6.jsx';
 import Component7 from './example/day02/Component7.jsx';
 // create.render(<Component7/>)
 import Task3 from './example/day02/Task3.jsx';
-create.render(<Task3></Task3>)
+// create.render(<Task3></Task3>)
+import Task4 from './example/day02/Task4.jsx';
+create.render(<Task4></Task4>)
 
 // * 2 ~ 4-2 요약가능 , 즉]  createRoot( document.querySelector('#root') ).render( <최초출력할함수명 /> );
 // createRoot( document.querySelector('#root') ).render( <App /> );
