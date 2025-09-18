@@ -51,7 +51,19 @@ import Component7 from './example/day02/Component7.jsx';
 import Task3 from './example/day02/Task3.jsx';
 // create.render(<Task3></Task3>)
 import Task4 from './example/day02/Task4.jsx';
-create.render(<Task4></Task4>)
+// create.render(<Task4></Task4>)
+import Component8 from './example/day03/Component8.jsx';
+// create.render(<Component8></Component8>)
+import Copmonent9 from './example/day03/Component9.jsx';
+// create.render(<Copmonent9></Copmonent9>)
+import Component10 from './example/day03/Component10.jsx';
+// create.render(<Component10/>)
+import Task5 from './example/day03/Task5.jsx';
+create.render(<Task5></Task5>)
+
+
+// import Aa2 from './example/day02/a0.jsx';
+// create.render(<Aa2></Aa2>)
 
 // * 2 ~ 4-2 요약가능 , 즉]  createRoot( document.querySelector('#root') ).render( <최초출력할함수명 /> );
 // createRoot( document.querySelector('#root') ).render( <App /> );

@@ -13,6 +13,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/board") // + 공통 URL
 @RequiredArgsConstructor
+// CORS( 서로 다른 서버간의 요청/응답 허용 ) 정책을 설정
+@CrossOrigin( value = "http://localhost:5173") // 리액트서버 와 CROS 통신을 허용
 public class BoardController {
      private final BoardService boardService;
 
