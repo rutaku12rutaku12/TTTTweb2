@@ -21,8 +21,12 @@ public class MovieController {
     // [1] 영화 등록
     @PostMapping
     public ResponseEntity<Boolean> movieAdd(@RequestBody MovieDto movieDto){
-        Boolean result = movieService.movieAdd(movieDto);
+        try{
+        boolean result = movieService.movieAdd(movieDto);
         return ResponseEntity.status(200).body(result);
+        }catch (Exception e){
+            System.out.println(e);
+        }return null;
     }
     // [2] 영화 삭제 (비밀번호 기반)
     @DeleteMapping

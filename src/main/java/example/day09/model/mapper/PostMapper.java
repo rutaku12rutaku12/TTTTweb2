@@ -20,6 +20,6 @@ public interface PostMapper {
     public boolean postDelete(int pno , String ppwd);
 
     // [3] 영화별 토론 전체 조회
-    @Select("select * from post where mno = #{mno};")
+    @Select("select p.pno , p.pcontent, p.ppwd, m.mtitle from post p join movie m on p.mno = m.mno where p.mno = #{mno};")
     public List<PostDto> postPrint(int mno);
 }

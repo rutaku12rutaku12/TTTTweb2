@@ -28,7 +28,7 @@ export default function Task5( props ){
         [ {mno :1 , mname:"유재석" ,mphone:"010-2231-2231",mage:30} ] 
     );
 
-    // [4] 출력할 데이터들을 axios 이용하여 스프링에게  요청 
+    // [4] 출력할 데이터들을 axios 이용하여 스프링에게 요청 
     const memberPrint = async() =>{
         const response = await axios.get("http://localhost:8080/member")
         setMembers(response.data)
