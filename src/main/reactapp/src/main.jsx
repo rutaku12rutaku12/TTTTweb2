@@ -67,8 +67,50 @@ import Component11 from './example/day04/Component11.jsx';
 import Component12 from './example/day04/Component12.jsx';
 // create.render(<Component12></Component12>)
 import Task6 from './example/day04/Task6.jsx';
-create.render(<Task6></Task6>)
+// create.render(<Task6></Task6>)
 
+import Component13 from './example/day05/Component13.jsx';
+// [1] 내가 만든 스토어(여러개 상태(전역변수) 를 갖는 저장소) 불러오기
+// import store from './example/day05/store.jsx';
+// [2] Store 사용할 곳에 store 공급 해주기 , <Provider store={ 내가만든스토어 } >
+// import { Provider } from 'react-redux';
+// * 주의할점 : dispath 보다 먼저 실행 되야한다. // 관례적으로 main.jsx에서 공급한다.
+// create.render(
+//     <Provider store={store}>
+//         <Component13></Component13>
+//     </Provider>
+// );
+
+// import App from './example/day05/실습7/App.jsx';
+// import { Provider } from 'react-redux';
+// import store, { persistor } from './example/day05/실습7/store/store.jsx'
+// import { PersistGate } from 'redux-persist/integration/react';
+// create.render(
+//     // 내가 만든 store 를 root 컴포넌트에 공급하여 모든 컴포넌트가 사용할수 있도록 *전역변수*
+//     // [2] 내가 만든 persist 공급 , loading : {초기 로딩값 } persist = { 내가 만든 persiststore }
+//     <Provider store={store}>
+//         <PersistGate loading = { null } persistor={ persistor }>
+//             <App/>
+//         </PersistGate>
+//     </Provider>
+// )
+
+// import App from './example/day05/실습7.0/App.jsx'
+// import { Provider } from 'react-redux';
+// import store from './example/day05/실습7.0/store/store.jsx';
+
+// create.render(
+//     <Provider store={store}>
+// <App></App>
+// </Provider>);
+
+import App from './example/day06/실습8/App.jsx';
+import { Provider } from 'react-redux';
+import store from './example/day06/실습8/store/store.jsx';
+create.render(
+    <Provider store={store}>
+        <App></App>
+    </Provider>)
 
 
 // import Aa2 from './example/day02/a0.jsx';
