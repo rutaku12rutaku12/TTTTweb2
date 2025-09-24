@@ -3,16 +3,8 @@ import { minus, plus } from "../store/cartSlice";
 
 export default function MenuPage(props){
 
-    const menu = [
-    { id: 1, name: "아메리카노", price: 3000 }, 
-    { id: 2, name: "카페라떼", price: 4000 },
-    { id: 3, name: "카푸치노", price: 4500 },
-    ];
-
-
-
-    const { cartcount } = useSelector((state)=>state.count)
-    console.log(cartcount);
+    const { menu } = useSelector((state)=>state.count)
+    console.log(menu);
 
     // [1] 액션(상태변경) 하기위한 dispatch 함수 가져오기
     const dispatch = useDispatch();
@@ -32,7 +24,7 @@ export default function MenuPage(props){
         { menu.map( (e) =>{
             return <div key={e.id}>
                 <ul>
-                    { cartcount >= 1 ?
+                    { e.cartcount >= 1 ?
                     <li>{e.name} : {e.price}원 <button onClick={()=>{onPlus(e.id)}}> 담기 </button><button onClick={()=>{onMinus(e.id)}}>빼기</button></li>
                     :<li>{e.name} : {e.price}원 <button onClick={()=>{onPlus(e.id)}}> 담기 </button></li>
                     }

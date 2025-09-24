@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function Hedaer(props){
+    
     return(<>  
     
         <Link to={"/"}> 홈으로 </Link> <br/>

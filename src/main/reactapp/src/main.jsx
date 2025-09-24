@@ -106,10 +106,13 @@ import Component13 from './example/day05/Component13.jsx';
 
 import App from './example/day06/실습8/App.jsx';
 import { Provider } from 'react-redux';
-import store from './example/day06/실습8/store/store.jsx';
+import store, { persistor } from './example/day06/실습8/store/store.jsx';
+import { PersistGate } from 'redux-persist/integration/react';
 create.render(
     <Provider store={store}>
-        <App></App>
+        <PersistGate loading = {null}persistor={persistor}>
+            <App></App>
+        </PersistGate>
     </Provider>)
 
 
