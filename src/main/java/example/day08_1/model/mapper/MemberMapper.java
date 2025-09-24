@@ -1,6 +1,6 @@
-package example.day08.model.mapper;
+package example.day08_1.model.mapper;
 
-import example.day08.model.dto.MemberDto;
+import example.day08_1.model.dto.MemberDto;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;

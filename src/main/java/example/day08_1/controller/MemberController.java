@@ -1,7 +1,7 @@
-package example.day08.controller;
+package example.day08_1.controller;
 
-import example.day08.model.dto.MemberDto;
-import example.day08.service.MemberService;
+import example.day08_1.model.dto.MemberDto;
+import example.day08_1.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

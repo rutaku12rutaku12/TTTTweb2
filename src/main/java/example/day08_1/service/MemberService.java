@@ -1,7 +1,7 @@
-package example.day08.service;
+package example.day08_1.service;
 
-import example.day08.model.dto.MemberDto;
-import example.day08.model.mapper.MemberMapper;
+import example.day08_1.model.dto.MemberDto;
+import example.day08_1.model.mapper.MemberMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
