@@ -5,13 +5,13 @@ import storage from 'redux-persist/lib/storage';
 const persistConfig = { key : 'cartcount' , storage }
 
 import { persistStore, persistReducer } from 'redux-persist';
-const persistedReducer = persistRedcuer( persistConfig, cartSlice);
+const persistedReducer = persistReducer( persistConfig, cartSlice);
 
 
 // [1] 스토어 만들기
 const store = configureStore({
     reducer : {
-        count : persistReducer
+        count : persistedReducer
     }
 });
 

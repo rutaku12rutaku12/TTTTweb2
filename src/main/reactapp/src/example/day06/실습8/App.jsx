@@ -7,12 +7,12 @@ import CartPage from "./pages/CartPage";
 export default function App(props){
     return(<> 
             <BrowserRouter>
-            <Hedaer></Hedaer>
-            <Routes>
-                <Route path="/" element={<HomePage></HomePage>}></Route>
-                <Route path="/menu" element={<MenuPage/>}></Route>
-                <Route path="/cart" element={<CartPage/>}></Route>
-            </Routes>
+                <Hedaer></Hedaer>
+                <Routes>
+                    <Route path="/" element={<HomePage></HomePage>}></Route>
+                    <Route path="/menu" element={<MenuPage/>}></Route>
+                    <Route path="/cart" element={<CartPage/>}></Route>
+                </Routes>
             </BrowserRouter>
     </>)
 }

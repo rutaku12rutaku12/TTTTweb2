@@ -1,14 +1,20 @@
 import { useSelector } from "react-redux"
 
 export default function CartPage(props){
-    const { cartcount } = useSelector( (state) =>state.count )
+    const { menu } = useSelector( (state) =>state.count )
 
     return(<> 장바구니 페이지 <br/><br/>
-    
-    제품명 : {menuInfo} <br/>
-    수량 : {cartcount}  <br/><br/>
+    {
+        menu.map((e)=>{
+            return <div key={e.id}>
+                        제품명 : {e.name} <br/>
+                        수량 : {e.cartcount}  <br/><br/>
 
-    총 합계 : {cartcount}
-
+                        총 합계 : {(e.price)*(e.cartcount)}원<br/><br/>
+                    </div>
+        }
+        )
+        
+    }
     </>)
 }
