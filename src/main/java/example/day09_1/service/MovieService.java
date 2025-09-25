@@ -1,7 +1,7 @@
-package example.day09.service;
+package example.day09_1.service;
 
-import example.day09.model.dto.MovieDto;
-import example.day09.model.mapper.MovieMapper;
+import example.day09_1.model.dto.MovieDto;
+import example.day09_1.model.mapper.MovieMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

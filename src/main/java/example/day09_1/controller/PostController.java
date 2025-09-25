@@ -1,7 +1,7 @@
-package example.day09.controller;
+package example.day09_1.controller;
 
-import example.day09.model.dto.PostDto;
-import example.day09.service.PostService;
+import example.day09_1.model.dto.PostDto;
+import example.day09_1.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

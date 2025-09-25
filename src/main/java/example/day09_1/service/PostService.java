@@ -1,7 +1,7 @@
-package example.day09.service;
+package example.day09_1.service;
 
-import example.day09.model.dto.PostDto;
-import example.day09.model.mapper.PostMapper;
+import example.day09_1.model.dto.PostDto;
+import example.day09_1.model.mapper.PostMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
