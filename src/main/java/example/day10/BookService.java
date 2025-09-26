@@ -32,6 +32,7 @@ public class BookService {
     @Transactional
     public boolean return1( Map<String,Object> body){
         int bookid = Integer.parseInt(String.valueOf(body.get("bookid")));
-        String
+
+        return true;
     }
 }
