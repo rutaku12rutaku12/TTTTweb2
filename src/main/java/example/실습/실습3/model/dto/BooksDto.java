@@ -11,5 +11,4 @@ public class BooksDto {
             private String title;
             private int stock;
 
-            private String member;
 }

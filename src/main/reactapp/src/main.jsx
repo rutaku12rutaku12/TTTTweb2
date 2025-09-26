@@ -114,6 +114,8 @@ create.render(
             <App></App>
         </PersistGate>
     </Provider>)
+// import Component14 from './example/day07/Component14.jsx';
+// create.render(<Component14></Component14>)
 
 
 // import Aa2 from './example/day02/a0.jsx';
