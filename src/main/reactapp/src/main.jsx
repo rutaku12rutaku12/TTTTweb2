@@ -57,7 +57,7 @@ import Component8 from './example/day03/Component8.jsx';
 import Copmonent9 from './example/day03/Component9.jsx';
 // create.render(<Copmonent9></Copmonent9>)
 import Component10 from './example/day03/Component10.jsx';
-// create.render(<Component10/>)
+create.render(<Component10/>)
 import Task5 from './example/day03/Task5.jsx';
 // create.render(<Task5></Task5>)
 import Movie from './example/day04/Movie.jsx';
@@ -116,8 +116,8 @@ import Component13 from './example/day05/Component13.jsx';
 //     </Provider>)
 // import Component14 from './example/day07/Component14.jsx';
 // create.render(<Component14></Component14>)
-import Component15 from './example/day08/Component15.jsx';
-create.render(<Component15></Component15>)
+// import Component15 from './example/day08/Component15.jsx';
+// create.render(<Component15></Component15>)
 
 
 // import Aa2 from './example/day02/a0.jsx';

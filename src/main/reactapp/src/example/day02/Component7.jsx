@@ -43,6 +43,7 @@ export default function Component7 ( props ){
         <button onClick={arrayAdd}> 과일추가 </button>
         <h3> useState 예제3 : </h3>
         <input value={ data } onChange={ dataAdd } />
+         양 옆 같은 함수임!
         <input value={ data } onChange={ (e)=>{setData( e.target.value ) } } />
     </>)
 
