@@ -116,8 +116,8 @@ import Component13 from './example/day05/Component13.jsx';
 //     </Provider>)
 // import Component14 from './example/day07/Component14.jsx';
 // create.render(<Component14></Component14>)
-import Component15 from './example/day08/Component15.jsx';
-create.render(<Component15></Component15>)
+// import Component15 from './example/day08/Component15.jsx';
+// create.render(<Component15></Component15>)
 
 
 // import Aa2 from './example/day02/a0.jsx';
@@ -130,3 +130,12 @@ create.render(<Component15></Component15>)
 // const root = document.querySelector('#root');
 // const html = `안녕하세요`;
 // root.innerHTML = html;
+
+import App from './example/day05/실습7.1/App.jsx';
+import { Provider } from 'react-redux';
+import store from './example/day05/실습7.1/store/store.jsx'
+create.render(
+    // [1] 내가 만든 store를 root 컴포넌트에 공급하여 모든 컴포넌특라 사용할수잇도록 전역변수
+    <Provider store={store}>
+<App></App>
+</Provider>)
