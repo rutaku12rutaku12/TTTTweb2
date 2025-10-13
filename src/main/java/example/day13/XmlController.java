@@ -50,4 +50,33 @@ public class XmlController {
         int result = xmlMapper.update(dto);
         return ResponseEntity.ok(result);
     }
+
+    // # 6-1. 특정한 국어점수가 이상인 학생 조회
+    @GetMapping("/q1")
+    public ResponseEntity< ? > query1(@RequestParam int kor ){
+        List<StudentDto> dtos = xmlMapper.query1(kor);
+        return ResponseEntity.ok(dtos);
+    }
+
+    // # 6-2. 특정한 국어점수가 이상인 학생 조회 , XML 방법
+    @GetMapping("/q2")
+    public ResponseEntity< ? > query2(@RequestParam int kor ){
+        List<StudentDto> dtos = xmlMapper.query2(kor);
+        return ResponseEntity.ok(dtos);
+    }
+
+    // # 7. 이름(포함된) 또는 수학점수(이상) 로 검색
+    @GetMapping("/q3")
+    public ResponseEntity< ? > query3(@RequestParam String name , @RequestParam int math){
+        List<StudentDto> result = xmlMapper.query3(name,math);
+        return ResponseEntity.ok(result);
+    }
+
+    // # 8. 여러개 학생 등록
+    @PostMapping("/saveall")
+    public ResponseEntity< ? > saveAll(@RequestBody List<StudentDto> dtos){
+        int result = xmlMapper.saveAll(dtos);
+        return ResponseEntity.ok(result);
+    }
+
 } // class end

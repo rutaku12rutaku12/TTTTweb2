@@ -38,4 +38,43 @@
     <update id="update" parameterType="example.day06.StudentDto">
         UPDATE student SET name=#{name}, kor = #{kor}, math = #{math} WHERE sno= #{sno}
     </update>
+
+    <!-- [6] IF 동적쿼리 -->
+    <select id="query2"
+            parameterType="int"
+            resultType="example.day06.StudentDto">
+        select * from student where 1=1
+            <if test="kor !=null ">
+                and kor >= #{kor}
+            </if>
+    </select>
+
+    <!-- [7] IF 동적쿼리 2 : parameterTye 2개 이상일때 dto 묶는다 또는 생략 -->
+    <select id="query3"
+            resultType="example.day06.StudentDto">
+        select * from student
+            <where>
+                <if test="name != null">
+                    and name like concat( '%' , #{name} ,'%' )
+                </if>
+                <if test="math != 0">
+                    and math >= #{math}
+                </if>
+            </where>
+    </select>
+    <!-- 필드명 like %30# : 필드내 값이 포함된 레코드 조회 -->
+    <!-- concat(문자열,문자열) : 문자열 연결함수 -->
+
+    <!-- [8] foreach 동적쿼리 , 여러개 학생 등록 -->
+    <insert id="saveAll"
+            parameterType="List"
+            useGeneratedKeys="true"
+            keyProperty="sno">
+        insert into student (name,kor,math) values
+            <foreach collection="list" item="s" separator=",">
+                ( #{s.name}, #{s.kor}, #{s.math} )
+            </foreach>
+    </insert>
+    <!-- foreach collection"컬렉션타입" item="반복변수명(아무거나)" separator="박본되는 SQL 구분문자" -->
+
 </mapper> <!-- mapper 끝 -->
