@@ -72,7 +72,7 @@ public class XmlController {
         return ResponseEntity.ok(result);
     }
 
-    // # 8. 여러개 학생 등록
+    // # 8. 여러개 학생 등록i
     @PostMapping("/saveall")
     public ResponseEntity< ? > saveAll(@RequestBody List<StudentDto> dtos){
         int result = xmlMapper.saveAll(dtos);
