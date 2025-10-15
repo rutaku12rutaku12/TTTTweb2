@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.day15.BookMapper">
+    <!-- 1. 책books 테이블에 price 가격(int) 필드 추가 -->
+    <update id="change1">
+        alter table books add column price int
+    </update>
+    <!-- 2. 책books 테이블에 title 책이름 필드 (longtext) 필드 수정  -->
+    <update id="change2">
+        alter table books modify title longtext
+    </update>
+
+    <!-- 3. 평균 재고보다 많은 재고를 가진 도서 조회  -->
+    <select id="ser1" resultType="example.실습.실습3.model.dto.BooksDto">
+        select title from books where stock > (select avg(stock) from books)
+    </select>
+
+    <!-- 4. 가장 많이 대출한 도서 조회  -->
+    <select id="ser2" resultType="example.실습.실습3.model.dto.BooksDto">
+        select title from books join rentals on books.id = rentals.id group by books.title order by count(rentals.rent_date) desc limit 1
+    </select>
+</mapper>
