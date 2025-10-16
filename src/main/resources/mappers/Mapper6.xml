@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.day16.BookMapper">
+    <!-- 1. 책books 테이블에 price 가격(int) 필드 추가 -->
+    <update id="change1">
+        alter table books add column price int
+    </update>
+    <!-- 2. 책books 테이블에 title 책이름 필드 (longtext) 필드 수정  -->
+    <update id="change2">
+        alter table books modify title longtext
+    </update>
+
+    <!-- 3. 평균 재고보다 많은 재고를 가진 도서 조회  -->
+    <select id="ser1" resultType="example.실습.실습3.model.dto.BooksDto">
+        select title from books where stock > (select avg(stock) from books)
+    </select>
+
+    <!-- 4. 가장 많이 대출한 도서 조회  -->
+    <select id="ser2" resultType="example.실습.실습3.model.dto.BooksDto">
+        select title from books join rentals on books.id = rentals.id group by books.title order by count(rentals.rent_date) desc limit 1
+    </select>
+
+
+    <!-- 5. 대출기록 상세 뷰 생성 ( 책 + 대출기록 JOIN ) -->
+    <update id="cre1">
+        create or replace view loan as select b.id as books_id , b.title, b.stock, r.id as rentals_id, r.book_id , r.member , r.rent_date , r.return_date from books b join rentals r on b.id = r.book_id;
+    </update>
+    <!-- 6. 평균 재고보다 많은 재고를 가진 도서 조회 뷰 생성  -->
+    <update id="cre2">
+        create or replace view aver as select title from books where stock > (select avg(stock) from books)
+    </update>
+    <!-- 7. 대출 상세 뷰 조회 -->
+    <select id="sel1">
+        select * from loan
+    </select>
+    <!-- 8. 평균 재고보다 많은 재고를 가진 도서 조회 뷰 조회  -->
+    <select id="sel2">
+        select * from aver
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
