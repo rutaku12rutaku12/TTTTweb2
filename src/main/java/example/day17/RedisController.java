@@ -120,4 +120,6 @@ public class RedisController {
         else if ( savedCode.equals( code ) ){ return ResponseEntity.ok("[인증성공]"); }
         else { return ResponseEntity.ok("[인증실패]"); }
     }
+
+
 } // class end
