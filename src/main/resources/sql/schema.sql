@@ -34,7 +34,7 @@ CREATE TABLE trans(
     money INT UNSIGNED DEFAULT 0
 );
 
--- --------------------------------------- 실습3  ----------------------------------------
+-- --------------------------------------- 실습3 / 실습4  ----------------------------------------
 DROP TABLE IF EXISTS rentals;
 DROP TABLE IF EXISTS books;
 -- 1. 책 테이블
@@ -54,4 +54,16 @@ CREATE TABLE rentals (
     return_date DATETIME NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (book_id) REFERENCES books(id)
+);
+-- --------------------------------------- web2 ----------------------------------------
+-- [2] 회원 테이블 생성
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+    uno INT AUTO_INCREMENT PRIMARY KEY,     -- 회원번호 (PK)
+    uid VARCHAR(50) NOT NULL UNIQUE,        -- 아이디
+    upwd VARCHAR(255) NOT NULL,             -- 비밀번호( 암호화 )
+    uname VARCHAR(50) NOT NULL,             -- 닉네임 (이름)
+    uphone VARCHAR(20),                     -- 연락처
+    urole VARCHAR(20) DEFAULT 'USER',       -- 권한 (기본 USER)
+    udate DATETIME DEFAULT NOW()            -- 가입일
 );

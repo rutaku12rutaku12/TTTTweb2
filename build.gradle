@@ -46,6 +46,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     // [10] noSql Redis
     implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    // [11] 비크립트
+    implementation 'org.springframework.security:spring-security-crypto:6.4.4'
+    // [12] JWT
+    implementation 'io.jsonwebtoken:jjwt-api:0.12.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.6'
+    runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.6'
+    // [13] 스프링 시큐리티
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 }
 
 tasks.named('test') {
