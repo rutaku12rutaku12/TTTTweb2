@@ -10,7 +10,7 @@ export default function Login(){
     // 2. 로그인 요청
     const postLogin = async ()=>{
         try{
-            const url = "http://localhost:8080/";
+            const url = "http://localhost:8080/api/user/login";
             const obj = {uid,upwd}
             const res = await axios.post( url, obj , { withCredentials : true } )
             if( res.data != '' ){
@@ -33,3 +33,4 @@ export default function Login(){
         </form>
     </>)
 }
+
