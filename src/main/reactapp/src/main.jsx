@@ -131,11 +131,14 @@ import Component13 from './example/day05/Component13.jsx';
 // const html = `안녕하세요`;
 // root.innerHTML = html;
 
-import App from './example/day05/실습7.1/App.jsx';
-import { Provider } from 'react-redux';
-import store from './example/day05/실습7.1/store/store.jsx'
-create.render(
-    // [1] 내가 만든 store를 root 컴포넌트에 공급하여 모든 컴포넌특라 사용할수잇도록 전역변수
-    <Provider store={store}>
-<App></App>
-</Provider>)
+// import App from './example/day05/실습7.1/App.jsx';
+// import { Provider } from 'react-redux';
+// import store from './example/day05/실습7.1/store/store.jsx'
+// create.render(
+//     // [1] 내가 만든 store를 root 컴포넌트에 공급하여 모든 컴포넌특라 사용할수잇도록 전역변수
+//     <Provider store={store}>
+// <App></App>
+// </Provider>)
+
+import App from './web2/App.jsx';
+create.render(<App></App>)
