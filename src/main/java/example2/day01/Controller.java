@@ -31,7 +31,7 @@ public class Controller {
         System.out.println(result);
         return result;
     }
-    // 4.
+    // 4. ㅇ
     @DeleteMapping
     public ResponseEntity<?> delete(
             @RequestParam int col1 ){
