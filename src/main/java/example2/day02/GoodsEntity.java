@@ -1,0 +1,40 @@
+package example2.day02;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity // 해당 클래스에 데이터베이스 테이블 과 매핑
+@Table( name = "goods" ) // + 테이블 이름 정의 , 생략시 클래스명으로 테이블명 정의
+@Data@Builder@NoArgsConstructor@AllArgsConstructor // 롬복
+public class GoodsEntity extends BaseTime{
+    @Id // PK필드 주입 :: JPA 는 엔티티 1개당 PK 필드는 1개이상 필수이다.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment 주입 :: MYSQL 에서만 가능, 오라클 불가능
+    private int gno;        // 제품번호
+
+    @Column( nullable = false, length = 100 ) // @Column(속성명=값, 속성명=값2) ,
+    // nullable : null 제외
+    // length : 최대 글자수
+    private String gname;   // 제품명
+    @Column( nullable = true)
+    private int gprice;     // 제품가격
+    @Column( columnDefinition = "varchar(100) default '제품설명' not null" )
+    private String gdesc;   // 제품설명
+
+    // +++++++++++ Enttiy --> dto ++++++++++++++
+    // ++ Service -> Controller ++ : R(출력)
+    public GoodsDto toDto(){
+        // 객체생성방법1 : new 클래스명( 값, 값 ) ;
+        // 객체생성방법2 클래스명 .builder().속성명(값).속성명(값).build()
+        return GoodsDto.builder()
+                .gno(this.gno)      // this 란? 현재 메소드를 호출한 인스턴스(객체)
+                .gname(this.gname)
+                .gprice(this.gprice)
+                .update_date( this.getUpdateDate().toString())
+                .create_date( this.getCreateDate().toString())
+                .build();
+    }
+
+} // class end
