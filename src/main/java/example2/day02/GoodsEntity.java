@@ -32,6 +32,7 @@ public class GoodsEntity extends BaseTime{
                 .gno(this.gno)      // this 란? 현재 메소드를 호출한 인스턴스(객체)
                 .gname(this.gname)
                 .gprice(this.gprice)
+                .gdesc(this.gdesc)
                 .update_date( this.getUpdateDate().toString())
                 .create_date( this.getCreateDate().toString())
                 .build();

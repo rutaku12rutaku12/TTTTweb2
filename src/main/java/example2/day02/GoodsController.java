@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/goods")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class GoodsController {
 
     private final GoodsService goodsService;
@@ -14,6 +15,7 @@ public class GoodsController {
     @PostMapping
     public ResponseEntity<?> goodsSave(
             @RequestBody GoodsDto goodsDto){
+        System.out.println(goodsDto);
         return ResponseEntity.ok(
                 goodsService.goodsSave( goodsDto ) );
     }
