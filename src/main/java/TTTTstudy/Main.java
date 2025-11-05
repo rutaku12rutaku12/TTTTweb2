@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-        long A = scan.nextInt();
-        long B = scan.nextInt();
-        long C = scan.nextInt();
-
-
-        System.out.println(A+B+C);
-
+        int N = scan.nextInt();
+        int i;
+        int sum=0;
+        for( i = 1; i <= N ; i++){
+            sum+=i;
+        }
+        System.out.println(sum);
         scan.close();
     }
 
