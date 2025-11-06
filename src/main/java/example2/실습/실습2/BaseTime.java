@@ -18,5 +18,5 @@ public class BaseTime {
     @CreatedDate // 현재 날짜 시간 자동으로 주입
     private LocalDateTime createdAt; // 생성 날짜/시간
     @LastModifiedDate // 엔티티 변화 시점의 날짜/시간 자동으로 주입
-    private String updatedAt; // 수정날짜/시간
+    private LocalDateTime updatedAt; // 수정날짜/시간
 }
