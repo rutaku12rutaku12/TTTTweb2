@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 // 지정한 엔티티들을 조작하는 인터페이스
 public interface GoodsRepository
 extends JpaRepository<GoodsEntity , Integer> {
-    // extends JpaRepository< 조작할엔티티클래스명, 타입명 >
+    // extends JpaRepository< 조작할엔티티클래스명, ID 참조타입명 >
 }
