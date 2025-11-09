@@ -1,19 +1,21 @@
 package TTTTstudy;
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
-        int i;
-        int sum=0;
-        for( i = 1; i <= N ; i++){
-            sum+=i;
+    public static void main(String[] args) throws IOException {
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int T = Integer.parseInt(bf.readLine());
+        for(int i =0; i<T ; i++){
+            String[] arr = bf.readLine().split(" ");
+            int a = Integer.parseInt(arr[0]);
+            int b = Integer.parseInt(arr[1]);
+            bw.write(a+b+"\n");
         }
-        System.out.println(sum);
-        scan.close();
+        bw.flush();
+        bw.close();
+        bf.close();
     }
-
 }
 
