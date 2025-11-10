@@ -43,4 +43,13 @@ public class TodoController {
             @RequestParam(defaultValue = "3") int size){ // 조회 페이지에 조회할 자료의 총 개수
         return ResponseEntity.ok(todoService.page( page,size ));
     }
+
+    // [5] 2-5 키워드페이징
+    @GetMapping("/page2")
+    public ResponseEntity<?> page2(
+            @RequestParam String keyword,
+            @RequestParam int page,
+            @RequestParam int size ){
+        return ResponseEntity.ok(todoService.page2(keyword,page,size) );
+    }
 }
