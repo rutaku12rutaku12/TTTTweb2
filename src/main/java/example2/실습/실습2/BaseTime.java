@@ -5,6 +5,7 @@ import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +13,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass // 엔티티 상속용도
 // AppStart 클래스 위에 @EnableJpaAuditing 주입해야 가능하다! +_+
 // JPA가 데이터베이스를 모니터링 하여 엔티티가 변화하면 데이터베이스 변화 실행
-@EntityListeners(AutoCloseable.class) // 해당 엔티티를 자동 감시 적용
+@EntityListeners(AuditingEntityListener.class) // 해당 엔티티를 자동 감시 적용
 public class BaseTime {
 
     @CreatedDate // 현재 날짜 시간 자동으로 주입
